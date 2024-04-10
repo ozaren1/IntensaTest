@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: rgb(195 192 192);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.container{
+    max-width: 1400px;
+    padding: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.input{
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    transition: all .5s ease;
+    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 200px auto;
+    max-width: 600px;
+    gap: 20px;
+}
+.select{
+    border-radius: 15px;
+    padding: 20px;
+    color:  rgb(130 132 130);
+    
+}
+.submit{
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    background-color: rgba(239, 28, 137, 0.8);
+    border: none;
+    color: #fff;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.disabled{
+    background-color: rgb(10 9 10 / 80%);
+}
+
+
+.result ul {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    border-bottom: 1px solid white;
+    box-shadow: 0px 9px 20px 0px rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+}
+.result li{
+   list-style: none;
+
+}
+.suitable{
+    display: block;
+}
+ul.inappropriate{
+    display: none;
+}
+
+
+.input:focus-visible{
+    outline: none;
+}
+.invalid{
+    color: rgba(239, 28, 137, 0.8);
+}
+.input.invalid:focus{
+    outline: none;
+    box-shadow: 0px 0px 20px 2px rgba(239, 28, 137, 0.8);
+}
+.input.valid:focus{
+    outline: none;
+    box-shadow: 0px 0px 20px 2px rgba(1, 237, 143, 0.8);
+}
+.select:focus-visible,
+.filter-city:focus-visible{
+    outline: none;
+}
+.select,
+.filter-city{
+    border: none;
+}
+.filter-city{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+   
+}
+@media(max-width:666px) {
+    .result ul {
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+}}
